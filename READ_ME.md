@@ -1,11 +1,11 @@
-##GOAL
-Build a basic 1 page portfolio web site
+#Welcome to My Portfolio#
+##I'll be posting my public projects on my page##
+Here are a few guidelines I'll follow:
 - Responsive
-- Navigation bar
-- Cards with projects information
-- Contact information
+- Latest technology
+- Ultra light and fast projects achieved by optimizing the code
 
-##TOOLS
+##TOOLS##
 - HTML
 - CSS: grid
 - JS: no frameworks
