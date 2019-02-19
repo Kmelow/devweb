@@ -17,6 +17,10 @@ body {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+li i span {
+	color: var(--ash);
+}
+
 /* CONTAINER */
 .container {
 
@@ -31,9 +35,9 @@ body {
 .nav-bar {
 	/* height: 100vh; */
 	display: grid;
-	height: 48px;
+	height: 64px;
 	align-items: center;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 16px 1fr 1fr 16px;
 	grid-template-areas: 
 	". nav-logo navigation .";
 }
@@ -43,7 +47,7 @@ body {
 }
 .navigation {
 	grid-area: navigation;
-	justify-self: center;
+	justify-self: end;
 }
 
 /* LAND-PAGE */
@@ -52,7 +56,8 @@ body {
 	display: grid;
 	justify-content: start;
 	align-items: center;
-	grid-template-columns: 1fr 360px 1fr;
+	grid-template-columns: 16px 1fr 16px;
+	/* grid-template-columns: 1fr 360px 1fr; */
 	grid-template-rows: 260px;
 	grid-template-areas:
 	". call-out ."
@@ -60,9 +65,26 @@ body {
 }
 .call-out {
 	grid-area: call-out;
+	padding: 4px;
 }
 .call-btn {
 	grid-area: call-btn;
+}
+.my-btn.call-btn {
+	border: 2px solid var(--sea);
+	border-radius: 4px;
+	background: var(--sea);
+	color: var(--ash);
+	font-size: 1.6em;
+	padding: 0.2em;
+	cursor: pointer;
+
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.my-btn.call-btn:hover {
+	background: var(--ash);
+	color: var(--sea);
 }
 
 /* PROJECTS */
@@ -124,6 +146,7 @@ body {
 	color: var(--ash);
 	grid-area: goodbyes;
 	align-self: start;
+	padding: 24px;
 }
 .contact-pic {
 	grid-area: contact-pic;
@@ -131,6 +154,7 @@ body {
 #profile-pic {
 	border-radius: 50%;
 }
+
 .contact-info {
 	list-style-type: none;
 	/* justify-self: start; */
@@ -139,14 +163,42 @@ body {
 
 /* FOOTER */
 .footer {
+	color: var(--ash);
 	width: 100%;
 	text-align: center;
-	background-color: var(--titanium);
+	background-color: var(--shadow);
+	/* border-style: solid; */
+	/* border-width: 1px; */
+	/* border-color: var(--shadow); */
 	text-align: center;
-	/* position: relative; */
-	/* bottom: 0; */
+	padding: 10px 5px;
 }
 
+.fas,.fab {
+	color: var(--sea);
+	padding: var(--main-padding);
+}
+
+.icon {
+  font-size: 24px;
+	color: var(--titanium);
+}
+.icon span {
+	font-family: 'Courier New', Courier, monospace;
+	color: var(--titanium);
+}
+
+.contact-icon{
+	color: var(--ash);
+}
+
+.icon:hover {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	color: var(--sea);
+}
+
+/* //////////////////////////////// */
 /* DESKTOP VERSION */
 @media screen and (min-width: 800px)
 {
@@ -154,9 +206,7 @@ body {
 		position: -webkit-sticky;
 		position: sticky;
 		top: 0;
-		/* height: 100vh; */
 		display: grid;
-		height: 48px;
 		align-items: center;
 		grid-template-columns: 1fr 360px 360px 1fr;
 		grid-template-areas: ". nav-logo navigation ."
@@ -166,7 +216,7 @@ body {
 		grid-area: land-page;
 		display: grid;
 		justify-content: center;
-		place-items: center center;
+		/* place-items: center center; */
 		grid-template-columns: 1fr 360px 360px 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas:
@@ -202,47 +252,9 @@ body {
 		". contact-pic contact-info ."
 		". . call-btn .";
 	}
-}
 
-.fas,.fab {
-	color: var(--sea);
-	padding: var(--main-padding);
+	#profile-pic {
+		width: 256px;
+		height: 256px;
+	}
 }
-
-.icon {
-	color: var(--titanium);
-}
-.icon span {
-	font-family: 'Courier New', Courier, monospace;
-	color: var(--titanium);
-}
-
-.my-btn.call-btn {
-	border: 2px solid var(--sea);
-	background: var(--sea);
-	color: var(--ash);
-	font-size: 2em;
-	padding: 0.5em;
-	border-radius: 4px;
-
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-}
-.my-btn.call-btn:hover {
-	background: var(--ash);
-	color: var(--sea);
-}
-.contact-icon{
-	color: var(--ash);
-}
-
-.icon:hover {
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	color: var(--sea);
-}
-
-li i span {
-	color: var(--ash);
-}
-
