@@ -16,7 +16,9 @@ body {
 	font-family: 'Zilla Slab', serif;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+ul {
+	list-style-type: none;
+}
 li i span {
 	color: var(--ash);
 }
@@ -86,6 +88,8 @@ li i span {
 	background: var(--ash);
 	color: var(--sea);
 }
+
+.private-link {cursor: not-allowed;}
 
 /* PROJECTS */
 .projects {
@@ -158,8 +162,6 @@ li i span {
 }
 
 .contact-info {
-	list-style-type: none;
-	/* justify-self: start; */
 	grid-area: contact-info;
 }
 
@@ -204,6 +206,34 @@ li i span {
 /* DESKTOP VERSION */
 @media screen and (min-width: 800px)
 {
+	/* TOOLTIP */
+	.tooltip {
+		position: relative;
+		display: inline-block;
+	}
+	.tooltip .tooltiptext {
+		/* font-size: 0.33em; */
+		visibility: hidden;
+		width: 120px;
+		background-color: var(--titanium);
+		color: var(--ash);
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 4px;
+	
+		/* Position */
+		position: absolute;
+		z-index: 1;
+		width: 120px;
+		top: 120%;
+		left: 50%;
+		margin-left: -60px;
+	}
+	/* Show tooltip */
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+	}
+
 	.nav-bar {
 		position: -webkit-sticky;
 		position: sticky;
@@ -239,7 +269,6 @@ li i span {
 		". p3-img p3-desc .";
 	}
 
-	
 	.contact {
 		background: var(--titanium);
 		color: var(--shadow);
