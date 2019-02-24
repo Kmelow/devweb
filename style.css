@@ -202,10 +202,6 @@ li i span {
 	color: var(--sea);
 }
 
-/* //////////////////////////////// */
-/* DESKTOP VERSION */
-@media screen and (min-width: 800px)
-{
 	/* TOOLTIP */
 	.tooltip {
 		position: relative;
@@ -233,7 +229,10 @@ li i span {
 	.tooltip:hover .tooltiptext {
 		visibility: visible;
 	}
-
+/* //////////////////////////////// */
+/* DESKTOP VERSION */
+@media screen and (min-width: 800px)
+{
 	.nav-bar {
 		position: -webkit-sticky;
 		position: sticky;
