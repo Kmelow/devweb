@@ -123,6 +123,7 @@ img {
 .contact {
 	background: var(--titanium);
 	color: var(--shadow);
+	padding-bottom: 64px;
 	display: grid;
 	grid-gap: 32px;
 	justify-items: center;
