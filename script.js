@@ -23,17 +23,6 @@ setContactHeight = () => {
   }
 }
 
-setProjectHeight = () => {
-  // document.querySelector('.proj-card').style.height = window.innerHeight;
-  let projects = document.getElementsByClassName('proj-card')
-  for (let project = 0; project < projects.length; project++) {
-    projects[project].style.height = window.innerHeight
-    
-  }
-  // projects.map(project => project
-  console.log(projects)
-}
-
 setHeights = () => {
   setLandPageHeight()
   setContactHeight()
