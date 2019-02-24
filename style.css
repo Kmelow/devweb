@@ -106,12 +106,10 @@ li i span {
 	align-items: start;
 	grid-template-columns: 1fr 360px 1fr;
 	grid-template-areas: 
-	". p1-img ."
 	". p1-desc ."
-	". p2-img ."
+	". p1-img ."
 	". p2-desc ."
-	". p3-img ."
-	". p3-desc .";
+	". p2-img .";
 }
 .proj-img {
 	align-content: end;
@@ -171,9 +169,6 @@ li i span {
 	width: 100%;
 	text-align: center;
 	background-color: var(--shadow);
-	/* border-style: solid; */
-	/* border-width: 1px; */
-	/* border-color: var(--shadow); */
 	text-align: center;
 	padding: 10px 5px;
 }
